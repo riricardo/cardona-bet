@@ -1,7 +1,9 @@
+import LoginPage from "./components/pages/LoginPage";
+
 function App() {
   return (
     <>
-      <button className="btn btn-accent">My Btn</button>
+      <LoginPage />
     </>
   );
 }
