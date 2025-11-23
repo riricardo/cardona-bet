@@ -14,7 +14,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-3">
+      <p>simple test</p>
       <button className="btn btn-accent" onClick={login}>
         Login
       </button>
