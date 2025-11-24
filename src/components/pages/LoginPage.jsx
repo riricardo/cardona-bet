@@ -1,31 +1,15 @@
-import { useState } from "react";
-import { auth } from "../../config/firebase";
-import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-
 export default function LoginPage() {
-  const [text, setText] = useState("");
-
-  async function login() {
-    await signInWithPopup(auth, new GoogleAuthProvider());
-  }
-
-  async function test() {
-    setText(auth?.currentUser?.email);
-  }
-
   return (
-    <div className="flex flex-col gap-3">
-      <p>simple test</p>
-      <button className="btn btn-accent" onClick={login}>
-        Login
-      </button>
-      <button className="btn btn-accent" onClick={() => signOut(auth)}>
-        Logout
-      </button>
-      <button className="btn btn-accent" onClick={test}>
-        Test
-      </button>
-      <span>{text}</span>
+    <div className="flex flex-col h-screen justify-center items-center gap-4">
+      <div className="flex items-center">
+        <img
+          className="h-24 w-24 animate-spin-slow"
+          src="./icon.png"
+          alt="Logo"
+        />
+        <h1 className="casino-text mt-2">Cardona Bet</h1>
+      </div>
+      <button className="btn btn-accent">Login with google</button>
     </div>
   );
 }

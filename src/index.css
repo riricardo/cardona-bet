@@ -1,2 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: light, dark --prefersdark, cupcake --default;
+}
+
+@keyframes animate-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: animate-spin-slow 3s linear infinite;
+}
+
+.casino-text {
+  font-family: "Playwrite CU", cursive;
+  font-weight: 600;
+  font-style: normal;
+  color: #f5c041;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 2px 4px rgba(140, 108, 20, 0.1);
+  }
+  50% {
+    text-shadow: 0 4px 12px rgba(140, 108, 20, 0.3),
+      0 0 8px rgba(230, 185, 64, 0.4);
+  }
+  100% {
+    text-shadow: 0 2px 4px rgba(140, 108, 20, 0.1);
+  }
+}
